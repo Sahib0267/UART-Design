@@ -10,7 +10,7 @@ module baude_rate_gen(
 reg [12:0] tx_counter;
 reg [12:0] rx_counter;
 
-// RX : 16x baud clock
+
 always @(posedge clk)
 begin
     if(reset)
@@ -21,7 +21,7 @@ begin
         rx_counter <= rx_counter + 1'b1;
 end
 
-// TX : baud clock
+
 always @(posedge clk)
 begin
     if(reset)
