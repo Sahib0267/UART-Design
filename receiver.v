@@ -51,7 +51,7 @@ input clk , reset , rdy_clr , clk_enb , rx , output reg ready , output reg[7:0] 
                 begin
                 case(state)
                     start_state:begin
-                                    if(rx==0 || sample!=0)  //(rx==0 && sample!=0)
+                                    if(rx==0 || sample!=0) 
                                     sample<=sample+4'b1;
                                     
                                     if(sample==4'b1111)
